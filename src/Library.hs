@@ -44,7 +44,7 @@ bigPdeP :: Hamburguesa
 bigPdeP = agregarIngrediente Curry dobleCuarto
 
 dobleCuartoVegano :: Hamburguesa
-dobleCuartoVegano = (cambiarPanDePati . hacerVeggie) dobleCuarto
+dobleCuartoVegano = (cambiarPandePati . hacerVeggie) dobleCuarto
 
 calcularPrecio :: Hamburguesa -> Number
 calcularPrecio hamburguesa = precioBase hamburguesa + (sum . map precioIngrediente . ingredientes) hamburguesa 

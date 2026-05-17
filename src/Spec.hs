@@ -25,7 +25,7 @@ vegana = Hamburguesa {
     ingredientes = [Pan, BaconDeTofu, QuesoDeAlmendras, Pan]
 }
 americana :: Hamburguesa
-americana = hamburguesaSimple = Hamburguesa {
+americana = Hamburguesa {
     precioBase = 40,
     ingredientes = [Pan, Carne, Panceta, Cheddar, Panceta, Cheddar, Pan]
 }
