@@ -69,5 +69,37 @@ correrTests = hspec $ do
             ingredientes = [Pan, Carne, Panceta, Cheddar, Panceta, Cheddar, Pan]
             }
         
-    describe "Parte 2, funciones de orden superior"
-        
+    describe "Parte 2, mas burgas"
+        it "calcular precio hamburguesa doble cuarto" $ do
+            calcularPrecio dobleCuarto `shouldBe` 84
+        it "calcular precio hamburguesa bigPdeP" $ do
+            calcularPrecio bigPdeP `shouldBe` 89
+        it "hacer una hamburguesa del dia a la hamburguesa simple" $ do
+            delDia simple `shouldBe` Hamburguesa {
+                precioBase = 14,
+                ingredientes = [Papas, Pan, Carne, Pan]
+            }
+        it "hacer una hamburguesa del dia a la hamburguesa bigPdeP" $ do
+            delDia bigPdeP `shouldBe` Hamburguesa {
+                precioBase = 14,
+                ingredientes = [Papas, Curry, Carne, Cheddar, Pan, Carne, Cheddar, Pan]
+            }
+        it "calcular precio hamburguesa doble cuarto del dia" $ do
+            calcularPrecio (delDia dobleCuarto) `shouldBe` 88
+
+    describe "Parte 3, mas burgas^2"
+        it "hacer veggie hamburguesa doble cuarto del dia" $ do
+            hacerVeggie (delDia dobleCuarto) `shouldBe` Hamburguesa {
+                precioBase = 14,
+                ingredientes = [Papas, Curry, PatiVegano, QuesoDeAlmendras, Pan, PatiVegano, QuesoDeAlmendras, Pan]
+            }
+        it "hacer veggie hamburguesa bigPdeP del dia" $ do
+            hacerVeggie (delDia bigPdeP) `shouldBe` Hamburguesa {
+                precioBase = 14,
+                ingredientes = [Papas, Curry, PatiVegano, QuesoDeAlmendras, Pan, PatiVegano, QuesoDeAlmendras, Pan]
+            }
+        it "cambiar pan de hamburguesa simple" $ do
+            cambiarPandePati simple `shouldBe` Hamburguesa {
+                precioBase = 20,
+                ingredientes = [PanIntegral, Carne, PanIntegral]
+            }
