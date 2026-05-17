@@ -11,8 +11,8 @@
 
 ## Nombre y legajo
 
-- Legajo: **Completar** 
-- Nombre: **Completar**
+- Legajo: 2329086 
+- Nombre: Lorenzo Quinteros Villagra
 
 ## El enunciado
 
